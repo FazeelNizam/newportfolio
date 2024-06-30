@@ -62,7 +62,7 @@ const Banner = () => {
   const front = useTransform(scrollYProgress, [0, 1], ['0%', '3%'])
   const back = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
   const text = useTransform(scrollYProgress, [0, 1], ['0%', '500%'])
-  const text2 = useTransform(scrollYProgress, [0, 1], ['0%', '1500%'])
+  const text2 = useTransform(scrollYProgress, [0, 1], ['0%', '1900%'])
 
   // useEffect(() => {
   //   const textContainer = document.querySelector('.slidingText')

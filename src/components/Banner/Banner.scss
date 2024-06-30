@@ -57,6 +57,7 @@
 
         :nth-child(1) {
           font-size: 2.5rem;
+          line-height: 2.5rem;
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
@@ -64,6 +65,7 @@
         }
         :nth-child(2) {
           font-size: 6rem;
+          line-height: 8rem;
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
@@ -77,15 +79,14 @@
       }
       .bannerFlipText {
         position: absolute;
-        transform: translateZ(-1px);
-        width: 100%;
         display: flex;
+        top: calc(30% + 10.5rem);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        top: 52%;
         font-size: 2rem;
+        line-height: 2rem;
       }
 
       .textContainer {
@@ -165,14 +166,20 @@
       .imageContainer {
         // width: 120%;
         .backLayer {
-          width: 120%;
+          width: 100%;
         }
+
         .frontLayer {
-          right: -6%;
-          width: 120%;
+          width: 110%;
+          // left: -5%;
+          right: 1%;
+        }
+
+        .heroHeading {
+          top: 23%;
         }
         .bannerFlipText {
-          top: 52%;
+          top: calc(23% + 10.5rem);
         }
       }
     }
@@ -186,10 +193,10 @@
           width: 140%;
         }
         .heroHeading {
-          top: 35%;
+          top: 25%;
         }
         .bannerFlipText {
-          top: 57%;
+          top: calc(25% + 10.5rem);
         }
         .frontLayer {
           right: -14%;
@@ -207,10 +214,10 @@
           width: 150%;
         }
         .heroHeading {
-          top: 40%;
+          top: 30%;
         }
         .bannerFlipText {
-          top: 62%;
+          top: calc(30% + 10.5rem);
         }
         .frontLayer {
           width: 150%;
@@ -224,12 +231,16 @@
     .content {
       .imageContainer {
         .heroHeading {
-          font-size: 5rem;
+          padding: 0 2rem 0 2rem;
           top: 25%;
           // text-wrap: wrap !important;
+          :nth-child(2) {
+            font-size: 6rem;
+            line-height: 7rem;
+          }
         }
         .bannerFlipText {
-          top: 47%;
+          top: calc(25% + 17.5rem);
         }
       }
     }
