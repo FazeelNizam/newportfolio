@@ -1,0 +1,308 @@
+.wrapper {
+  overflow: hidden;
+  padding: 90px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at top center, #0c0021 0%, #090a0f 100%);
+  color: white;
+  perspective: 1px;
+
+  .content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.1s ease;
+
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+
+      .backLayer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        transform: translateZ(-2px);
+      }
+
+      .heroHeading {
+        position: absolute;
+        transform: translateZ(-1px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 30%;
+        // background-image: linear-gradient(
+        //   43deg,
+        //   #0022c9 0%,
+        //   #cc00bf 46%,
+        //   #ffa600 100%
+        // );
+        // background-clip: text;
+        // color: transparent;
+        // color: #09002c;
+        // text-shadow: 0 0 6px #4d7eef, 0 0 15px #353ad0, 0 0 28px #2225c7,
+        //   0 0 52px #0c0fa9, 0 0 100px #04068f, 0 0 120px #060877,
+        //   0 0 150px #01024d, 0 0 180px #000041;
+
+        :nth-child(1) {
+          font-size: 2.5rem;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          background-image: linear-gradient(to top, #7f7fbf, #e5e7eb);
+        }
+        :nth-child(2) {
+          font-size: 6rem;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          background-image: linear-gradient(
+            to bottom,
+            #4b5563,
+            #7f7fbf,
+            #e5e7eb
+          );
+        }
+      }
+      .bannerFlipText {
+        position: absolute;
+        transform: translateZ(-1px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 52%;
+        font-size: 2rem;
+      }
+
+      .textContainer {
+        width: 100%;
+        height: 6rem;
+        position: absolute;
+        transform: translateZ(-1px);
+        bottom: 40%;
+
+        .slidingTextContainer {
+          width: 100%;
+          position: relative;
+          transform: translateZ(-2px);
+        }
+
+        .slidingText {
+          display: flex;
+          position: absolute;
+          animation: slide 180s linear infinite;
+        }
+
+        .slidingText span {
+          padding: 0;
+          white-space: nowrap;
+          font-size: 40vh;
+          font-weight: 600;
+          padding-right: 5rem;
+          color: rgba(187, 187, 247, 0.211);
+        }
+
+        @keyframes slide {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+
+      .frontLayer {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        height: auto;
+
+        .front {
+          position: relative;
+          width: 100%;
+          height: auto;
+          transform: translateZ(0);
+        }
+
+        .floating-right {
+          position: absolute;
+          width: 22vw;
+          top: -20%;
+          right: 8%;
+          transform: translateZ(1px);
+          height: auto;
+        }
+        .floating-left {
+          position: absolute;
+          width: 19vw;
+          top: -20%;
+          left: 20%;
+          transform: translateZ(1px);
+          height: auto;
+          // filter: brightness(1.5) contrast(1.1) saturate(1.5);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1540px) {
+    .content {
+      .imageContainer {
+        // width: 120%;
+        .backLayer {
+          width: 120%;
+        }
+        .frontLayer {
+          right: -6%;
+          width: 120%;
+        }
+        .bannerFlipText {
+          top: 52%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .content {
+      .imageContainer {
+        // width: 120%;
+        .backLayer {
+          width: 140%;
+        }
+        .heroHeading {
+          top: 35%;
+        }
+        .bannerFlipText {
+          top: 57%;
+        }
+        .frontLayer {
+          right: -14%;
+          width: 140%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .content {
+      .imageContainer {
+        // width: 120%;
+        .backLayer {
+          width: 150%;
+        }
+        .heroHeading {
+          top: 40%;
+        }
+        .bannerFlipText {
+          top: 62%;
+        }
+        .frontLayer {
+          width: 150%;
+          right: -18%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      .imageContainer {
+        .heroHeading {
+          font-size: 5rem;
+          top: 25%;
+          // text-wrap: wrap !important;
+        }
+        .bannerFlipText {
+          top: 47%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 612px) {
+    .content {
+      .imageContainer {
+        .bannerFlipText {
+          top: 64%;
+        }
+      }
+    }
+  }
+}
+
+@function multiple-box-shadow($n) {
+  $value: '#{random(4000)-2000}px #{random(4000)-2000}px #fff';
+
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(4000)-2000}px #{random(4000)-2000}px #fff';
+  }
+
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(2000);
+$shadows-medium: multiple-box-shadow(1000);
+$shadows-big: multiple-box-shadow(300);
+
+.sky-container {
+  background: radial-gradient(ellipse at top center, #1b2735 0%, #090a0f 100%);
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.star1,
+.star2,
+.star3 {
+  background: #fff;
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+}
+
+.star1 {
+  width: 1px;
+  height: 1px;
+  box-shadow: $shadows-small;
+  animation: star-rotate 200s linear infinite;
+}
+
+.star2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: $shadows-medium;
+  animation: star-rotate 150s linear infinite;
+}
+
+.star3 {
+  width: 3px;
+  height: 3px;
+  box-shadow: $shadows-big;
+  animation: star-rotate 100s linear infinite;
+}
+
+@keyframes star-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
