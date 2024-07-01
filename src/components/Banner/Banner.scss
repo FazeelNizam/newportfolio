@@ -58,13 +58,13 @@
       z-index: 1;
       overflow: hidden;
 
-      .backLayer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: auto;
-        transform: translateZ(-2px);
-      }
+      // .backLayer {
+      //   position: absolute;
+      //   bottom: 0;
+      //   width: 100%;
+      //   height: auto;
+      //   transform: translateZ(-2px);
+      // }
 
       .heroHeading {
         position: absolute;
@@ -124,43 +124,43 @@
         line-height: 2rem;
       }
 
-      .textContainer {
-        width: 100%;
-        height: 6rem;
-        position: absolute;
-        transform: translateZ(-1px);
-        bottom: 40%;
+      // .textContainer {
+      //   width: 100%;
+      //   height: 6rem;
+      //   position: absolute;
+      //   transform: translateZ(-1px);
+      //   bottom: 40%;
 
-        .slidingTextContainer {
-          width: 100%;
-          position: relative;
-          transform: translateZ(-2px);
-        }
+      //   .slidingTextContainer {
+      //     width: 100%;
+      //     position: relative;
+      //     transform: translateZ(-2px);
+      //   }
 
-        .slidingText {
-          display: flex;
-          position: absolute;
-          animation: slide 180s linear infinite;
-        }
+      //   .slidingText {
+      //     display: flex;
+      //     position: absolute;
+      //     animation: slide 180s linear infinite;
+      //   }
 
-        .slidingText span {
-          padding: 0;
-          white-space: nowrap;
-          font-size: 40vh;
-          font-weight: 600;
-          padding-right: 5rem;
-          color: rgba(187, 187, 247, 0.211);
-        }
+      //   .slidingText span {
+      //     padding: 0;
+      //     white-space: nowrap;
+      //     font-size: 40vh;
+      //     font-weight: 600;
+      //     padding-right: 5rem;
+      //     color: rgba(187, 187, 247, 0.211);
+      //   }
 
-        @keyframes slide {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      }
+      //   @keyframes slide {
+      //     0% {
+      //       transform: translateX(0%);
+      //     }
+      //     100% {
+      //       transform: translateX(-100%);
+      //     }
+      //   }
+      // }
 
       .frontLayer {
         position: absolute;
