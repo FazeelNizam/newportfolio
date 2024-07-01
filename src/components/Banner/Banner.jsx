@@ -138,7 +138,7 @@ const Banner = () => {
             <FlipWords words={words} />
           </motion.div>
           <motion.div
-            style={{ y: front }}
+            // style={{ y: front }}
             className="frontLayer"
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
