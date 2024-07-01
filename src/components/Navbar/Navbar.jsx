@@ -61,7 +61,7 @@ const NavBar = () => {
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ y: -80 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1.4, duration: 0.5 }}
       >
         <div class="navbar" className={scrolled ? 'navbar scrolled' : 'navbar'}>
           <ul class="menu">
