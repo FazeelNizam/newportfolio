@@ -83,17 +83,17 @@ const NavBar = () => {
             </li>
             <li class="li">
               <a
-                href="#skills"
+                href="#about"
                 className={
-                  activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'
+                  activeLink === 'about' ? 'active navbar-link' : 'navbar-link'
                 }
-                onClick={() => onUpdateActiveLink('skills')}
+                onClick={() => onUpdateActiveLink('about')}
               >
                 <div className="icon">
                   <GiSkills size={25} />
                 </div>
                 <div className="link-container">
-                  <span className="label">Skills</span>
+                  <span className="label">About</span>
                 </div>
               </a>
             </li>
