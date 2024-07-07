@@ -1,3 +1,4 @@
+import BoxReveal from '../ui/BoxReveal'
 import IconCloud from '../ui/IconCloud'
 import styles from './Project.module.scss'
 
@@ -48,7 +49,9 @@ const slugs = [
 const Projects = () => {
   return (
     <div className={styles.container}>
-      <h1>Projects</h1>
+      <BoxReveal boxColor={'#5046e6'} duration={0.5}>
+        <h1>Projects</h1>
+      </BoxReveal>
       <IconCloud iconSlugs={slugs} />
     </div>
   )
