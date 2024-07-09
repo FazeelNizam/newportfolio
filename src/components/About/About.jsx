@@ -88,109 +88,6 @@ const About = () => {
         </video>
       </motion.div>
       <div className="bentoContainer">
-        {/* <Bento>
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 6,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 4,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 2,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 2,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 2,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 2,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 2,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 2,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 6,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 4,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 3,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 3,
-            }}
-            rowStart={{
-              large: 5,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 3,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 5,
-            }}
-          />
-          <Bento.Item
-            columnSpan={{
-              xsmall: 12,
-              small: 6,
-              large: 6,
-            }}
-            rowSpan={{
-              xsmall: 4,
-              large: 3,
-            }}
-          />
-        </Bento> */}
-        {/* <div className="bento-container">
-          <div className="bento-grid">
-            <div className="item item-1">1</div>
-            <div className="item item-2">2</div>
-            <div className="item item-3">3</div>
-            <div className="item item-4">4</div>
-            <div className="item item-5">5</div>
-            <div className="item item-6">6</div>
-          </div>
-        </div> */}
         <MagicContainer className="grid">
           <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
             <span className="counter">
@@ -234,13 +131,13 @@ const About = () => {
             </AnimatedGradientText>
           </MagicCard>
           <MagicCard className="item">
-            {/* <BorderBeam size={150} duration={12} delay={9} /> */}
+            {/* <BorderBeam size={150} duration={12} delay={9} /> */}4
           </MagicCard>
           <MagicCard className="item">
-            <span className="bottomText">
+            <h1 className="bottomText">
               <HiSquare3Stack3D />
               My Stack
-            </span>
+            </h1>
             <div className="slidingCardContainer">
               <div
                 className="slidingLeft"
