@@ -11,7 +11,8 @@ import { HiMiniFlag, HiSquare3Stack3D } from 'react-icons/hi2'
 import AnimatedGradientText from '../ui/AnimatedGradientText'
 import { PiShootingStarDuotone } from 'react-icons/pi'
 import { RiHourglassFill } from 'react-icons/ri'
-import { GiEmptyHourglass } from 'react-icons/gi'
+import { GiEmptyHourglass, GiSpanner } from 'react-icons/gi'
+import Marquee from '../ui/Marquee'
 
 const slugs = [
   'adobephotoshop',
@@ -136,9 +137,9 @@ const About = () => {
           <MagicCard className="item">
             <h1 className="bottomText">
               <HiSquare3Stack3D />
-              My Stack
+              My Tech Stack
             </h1>
-            <div className="slidingCardContainer">
+            {/* <div className="slidingCardContainer">
               <div
                 className="slidingLeft"
                 style={{ '--quantity': softwares.length, '--height': '50px' }}
@@ -168,6 +169,33 @@ const About = () => {
                     <span>{fcard.text}</span>
                   </div>
                 ))}
+              </div>
+            </div> */}
+            <div className="slidingCardContainer">
+              <div className="slidingLeft">
+                <Marquee pauseOnHover vertical className="[--duration:20s]">
+                  {softwares.map((scard) => (
+                    <div className="slidingCard" key={scard.id}>
+                      <figure>{scard.svg}</figure>
+                      <span>{scard.text}</span>
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+              <div className="slidingRight">
+                <Marquee
+                  reverse
+                  pauseOnHover
+                  vertical
+                  className="[--duration:20s]"
+                >
+                  {frameworks.map((fcard) => (
+                    <div className="slidingCard" key={fcard.id}>
+                      <figure>{fcard.svg}</figure>
+                      <span>{fcard.text}</span>
+                    </div>
+                  ))}
+                </Marquee>
               </div>
             </div>
             <div className="iconCloud">
