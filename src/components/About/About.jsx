@@ -1,23 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useAnimation, useScroll, useTransform } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 import './About.scss'
-import BlackHole from '../../img/blackhole.webm'
-import Grid6BG from '../../img/grid.svg'
-// import Grid6 from '../../img/b4.svg'
-import Grid7 from '../../img/b5.svg'
+
+//UI Components
 import IconCloud from '../ui/IconCloud'
-import BorderBeam from '../ui/BorderBeam'
-import ShineBorder from '../ui/ShineBorder'
 import { MagicCard, MagicContainer } from '../ui/MagicCard'
 import NumberTicker from '../ui/NumberTicker'
+import Marquee from '../ui/Marquee'
+import Vortex from '../ui/Vortex'
+
+//Images
+import Grid6BG from '../../img/grid.svg'
+import Grid7 from '../../img/b5.svg'
+
+//Icons
 import { HiMiniFlag, HiSquare3Stack3D } from 'react-icons/hi2'
 import AnimatedGradientText from '../ui/AnimatedGradientText'
 import { PiCrownSimpleFill, PiShootingStarDuotone } from 'react-icons/pi'
-import { RiHourglassFill } from 'react-icons/ri'
 import { GiEmptyHourglass, GiSpanner } from 'react-icons/gi'
-import Marquee from '../ui/Marquee'
-import Vortex from '../ui/Vortex'
-import { LampContainer } from '../ui/Lamp'
 import { IoRocket } from 'react-icons/io5'
 import {
   FaFacebook,
@@ -40,59 +40,48 @@ const slugs = [
   'multisim',
   'windows',
   'sass',
-  //   'typescript',
+  'python',
   'javascript',
-  //   'dart',
   'java',
   'react',
   'python',
-  //   'flutter',
-  //   'android',
   'html5',
   'css3',
   'nodedotjs',
-  //   'express',
+  'express',
   'nextdotjs',
-  //   'prisma',
-  //   'amazonaws',
-  //   'postgresql',
+  'prisma',
   'firebase',
-  //   'nginx',
   'vercel',
-  //   'testinglibrary',
-  //   'jest',
-  //   'cypress',
-  //   'docker',
   'git',
-  //   'jira',
   'github',
   'gitlab',
   'visualstudiocode',
-  //   'androidstudio',
-  //   'sonarqube',
   'figma',
 ]
 
 const frameworks = [
-  { id: 1, svg: <HiMiniFlag />, text: 'ReactJs' },
-  { id: 2, svg: <HiMiniFlag />, text: 'NextJs' },
-  { id: 3, svg: <HiMiniFlag />, text: 'Java' },
-  { id: 4, svg: <HiMiniFlag />, text: 'C' },
-  { id: 5, svg: <HiMiniFlag />, text: 'Java Script' },
-  { id: 6, svg: <HiMiniFlag />, text: 'Assembly' },
-  { id: 7, svg: <HiMiniFlag />, text: 'HTML' },
-  { id: 8, svg: <HiMiniFlag />, text: 'SASS' },
-  { id: 9, svg: <HiMiniFlag />, text: 'CSS' },
+  { svg: <HiMiniFlag />, text: 'ReactJs' },
+  { svg: <HiMiniFlag />, text: 'NextJs' },
+  { svg: <HiMiniFlag />, text: 'Java' },
+  { svg: <HiMiniFlag />, text: 'C' },
+  { svg: <HiMiniFlag />, text: 'Java Script' },
+  { svg: <HiMiniFlag />, text: 'Assembly' },
+  { svg: <HiMiniFlag />, text: 'HTML' },
+  { svg: <HiMiniFlag />, text: 'SASS' },
+  { svg: <HiMiniFlag />, text: 'CSS' },
 ]
 
 const softwares = [
-  { id: 1, svg: <GiEmptyHourglass />, text: 'Soft 1' },
-  { id: 2, svg: <GiEmptyHourglass />, text: 'Soft 2' },
-  { id: 3, svg: <GiEmptyHourglass />, text: 'Soft 3' },
-  { id: 4, svg: <GiEmptyHourglass />, text: 'Soft 4' },
-  { id: 5, svg: <GiEmptyHourglass />, text: 'Soft 5' },
-  { id: 6, svg: <GiEmptyHourglass />, text: 'Soft 6' },
-  { id: 7, svg: <GiEmptyHourglass />, text: 'Soft 7' },
+  { svg: <GiEmptyHourglass />, text: 'Filmora' },
+  { svg: <GiEmptyHourglass />, text: 'keil' },
+  { svg: <GiEmptyHourglass />, text: 'Ni Multisim' },
+  { svg: <GiEmptyHourglass />, text: 'Proteus' },
+  { svg: <GiEmptyHourglass />, text: 'Matlab' },
+  { svg: <GiEmptyHourglass />, text: 'Illustrator' },
+  { svg: <GiEmptyHourglass />, text: 'Figma' },
+  { svg: <GiEmptyHourglass />, text: 'Photoshop' },
+  { svg: <GiEmptyHourglass />, text: 'AutoCad' },
 ]
 
 const About = () => {
@@ -172,7 +161,7 @@ const About = () => {
               <div className="slidingLeft">
                 <Marquee pauseOnHover vertical className="[--duration:20s]">
                   {softwares.map((scard) => (
-                    <div className="slidingCard" key={scard.id}>
+                    <div className="slidingCard" key={scard.text}>
                       <figure>{scard.svg}</figure>
                       <span>{scard.text}</span>
                     </div>
@@ -187,7 +176,7 @@ const About = () => {
                   className="[--duration:20s]"
                 >
                   {frameworks.map((fcard) => (
-                    <div className="slidingCard" key={fcard.id}>
+                    <div className="slidingCard" key={fcard.text}>
                       <figure>{fcard.svg}</figure>
                       <span>{fcard.text}</span>
                     </div>
