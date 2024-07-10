@@ -8,7 +8,10 @@ export default function AnimatedGradientText({ children, className }) {
         className
       )}
     >
-      <div className="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#9100f9]/50 via-[#9c40ff]/50 to-[#0f0766]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]" />
+      <div
+        // className="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#9100f9]/50 via-[#9c40ff]/50 to-[#0f0766]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]"
+        className={`absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#9100f9]/50 via-[#0f0766]/50 to-[#9100f9]/50 bg-[length:var(--bg-size)_100%] p-[1px] ![mask-composite:subtract] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`}
+      />
       {children}
     </div>
   )

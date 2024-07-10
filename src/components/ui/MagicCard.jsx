@@ -91,7 +91,7 @@ const MagicCard = ({
   children,
   size = 400,
   spotlight = true,
-  borderColor = '#0b011dc4',
+  borderColor = '#1d1034b3',
   isolated = true,
   ...props
 }) => {

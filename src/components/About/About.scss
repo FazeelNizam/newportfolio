@@ -11,11 +11,17 @@
   .videoContainer {
     position: absolute;
     width: 100vw;
+    height: 50vh;
+    overflow: hidden;
     top: 0;
     z-index: -1;
-    // transition: opacity 0.3s ease-in-out;
-    // animation: autoShow;
-    // animation-timeline: view();
+    mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.7, rgba(0, 0, 0, 1)),
+      color-stop(0.99, rgba(0, 0, 0, 0))
+    );
 
     .video {
       width: 100%;
@@ -54,20 +60,16 @@
     }
 
     .item {
-      // border: 2px solid #464545;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       border-radius: 1rem;
-      // padding: 1rem;
       overflow: hidden;
-      transform: translateZ(0); // equivalent to transform-gpu
-      backdrop-filter: blur(40px);
-      // border: 1px solid rgba(255, 255, 255, 0.1);
+      transform: translateZ(0);
+      backdrop-filter: blur(12px);
       box-shadow: 0 -10px 50px -10px rgba(66, 52, 91, 0.1) inset;
       transition: all 0.3s ease-in-out;
-      // cursor: pointer;
       color: white;
 
       &:hover {
@@ -139,10 +141,6 @@
       .bottomText {
         width: 100%;
         font-size: 1.5rem;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-image: linear-gradient(to bottom, #4b5563, #7f7fbf, #e5e7eb);
 
         svg {
           margin-right: 10px;
@@ -173,6 +171,7 @@
 
         .slidingCard {
           height: 50px;
+          border-radius: 0.5rem;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
@@ -229,7 +228,6 @@
 
           &:hover {
             background: #9277b42a;
-            cursor: none;
           }
         }
 
@@ -237,7 +235,7 @@
           width: 50%;
           height: 100%;
           position: relative;
-          background: #9c7fbf24;
+          // background: #9c7fbf24;
           mask-image: -webkit-gradient(
             linear,
             left top,
@@ -250,14 +248,14 @@
             color-stop(0.99, rgba(0, 0, 0, 0)),
             color-stop(0.99, rgba(0, 0, 0, 0))
           );
-          border: 1px solid #5b487393;
+          // border: 1px solid #5b487393;
         }
 
         .slidingRight {
           width: 50%;
           height: 100%;
           position: relative;
-          background: #9c7fbf24;
+          // background: #9c7fbf24;
           mask-image: -webkit-gradient(
             linear,
             left top,
@@ -270,21 +268,221 @@
             color-stop(0.99, rgba(0, 0, 0, 0)),
             color-stop(0.99, rgba(0, 0, 0, 0))
           );
-          border: 1px solid #5b487393;
+          // border: 1px solid #5b487393;
         }
       }
     }
     .grid .item:nth-child(6) {
+      position: relative;
+      gap: 10%;
+      padding: 7%;
       grid-area: s6;
+
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: #9c7fbf16;
+
+        svg {
+          color: rgb(145, 0, 249);
+          font-size: 2.3rem;
+        }
+      }
+
+      .bottomText {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        text-align: center;
+
+        :nth-child(1) {
+          font-size: 1.3rem;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          background-image: linear-gradient(
+            to bottom,
+            #4b5563,
+            #7f7fbf,
+            #e5e7eb
+          );
+        }
+      }
     }
     .grid .item:nth-child(7) {
+      position: relative;
+      justify-content: flex-end;
+      padding-left: 7%;
+      padding-bottom: 7%;
       grid-area: s7;
+
+      .bottomText {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.12rem;
+        font-size: 1.2rem;
+        text-align: left;
+      }
     }
     .grid .item:nth-child(8) {
       grid-area: s8;
+      justify-content: space-between;
+      padding: 7%;
+
+      .bottomText {
+        width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+
+        svg {
+          margin-right: 10px;
+          font-size: 1.4rem;
+        }
+      }
+
+      .socialLink {
+        height: 20%;
+        width: 100%;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background: #9c7fbf16;
+        transition: all 0.3s ease-in-out;
+        font-size: 0.9rem;
+
+        figure {
+          height: 100%;
+          width: 25%;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: black;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: #785e98a4;
+            mask-image: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              color-stop(0.01, rgba(0, 0, 0, 0)),
+              color-stop(0.01, rgba(0, 0, 0, 0)),
+              color-stop(0.01, rgba(0, 0, 0, 0)),
+              color-stop(0.5, rgba(0, 0, 0, 1)),
+              color-stop(0.99, rgba(0, 0, 0, 0)),
+              color-stop(0.99, rgba(0, 0, 0, 0)),
+              color-stop(0.99, rgba(0, 0, 0, 0))
+            );
+          }
+
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+
+        span {
+          height: 100%;
+          width: 75%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 5%;
+        }
+
+        &:hover {
+          background: #9277b42a;
+        }
+      }
     }
     .grid .item:nth-child(9) {
+      position: relative;
+      gap: 8%;
+      padding: 7%;
       grid-area: s9;
+
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: #9c7fbf16;
+
+        svg {
+          color: rgb(145, 0, 249);
+          font-size: 2.3rem;
+        }
+      }
+
+      .bottomText {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.12rem;
+        color: rgba(255, 255, 255, 0.798);
+        font-size: 0.8rem;
+        text-align: center;
+
+        :nth-child(1) {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+
+      .socialLink {
+        height: 20%;
+        width: 80%;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #9c7fbf16;
+        transition: all 0.3s ease-in-out;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.798);
+
+        span {
+          height: 100%;
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          svg {
+            font-size: 1.2rem;
+            color: rgb(145, 0, 249);
+          }
+        }
+
+        p {
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 5%;
+        }
+
+        &:hover {
+          background: #9277b42a;
+          color: white;
+        }
+      }
     }
   }
 
@@ -364,9 +562,6 @@
               font-size: 1rem;
             }
           }
-
-          span {
-          }
         }
       }
     }
@@ -412,9 +607,6 @@
             svg {
               font-size: 0.9rem;
             }
-          }
-
-          span {
           }
         }
       }
@@ -523,6 +715,7 @@
       }
     }
   }
+
   @media screen and (max-width: 576px) {
     .bentoContainer {
       height: auto;
@@ -582,13 +775,6 @@
         width: 75% !important;
         .slidingCard {
           font-size: 80% !important;
-          figure {
-            svg {
-            }
-          }
-
-          span {
-          }
         }
       }
     }
@@ -648,13 +834,6 @@
         .slidingCardContainer {
           .slidingCard {
             font-size: 70% !important;
-            figure {
-              svg {
-              }
-            }
-
-            span {
-            }
           }
         }
       }
