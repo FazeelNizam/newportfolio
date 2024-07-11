@@ -1,4 +1,4 @@
-import { cn } from '../../utils/cn'
+import { cn } from '../../../utils/cn'
 import React, { useEffect, useRef } from 'react'
 import { createNoise3D } from 'simplex-noise'
 import { motion } from 'framer-motion'
@@ -9,7 +9,7 @@ const Vortex = (props) => {
   const particleCount = props.particleCount || 700
   const particlePropCount = 9
   const particlePropsLength = particleCount * particlePropCount
-  const rangeY = props.rangeY || 100
+  const rangeY = props.rangeY || 80
   const baseTTL = 50
   const rangeTTL = 150
   const baseSpeed = props.baseSpeed || 0.0

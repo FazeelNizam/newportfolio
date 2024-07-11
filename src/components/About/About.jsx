@@ -7,7 +7,6 @@ import IconCloud from '../ui/IconCloud'
 import { MagicCard, MagicContainer } from '../ui/MagicCard'
 import NumberTicker from '../ui/NumberTicker'
 import Marquee from '../ui/Marquee'
-import Vortex from '../ui/Vortex'
 
 //Images
 import Grid6BG from '../../img/grid.svg'
@@ -28,6 +27,8 @@ import {
   FaLinkedin,
 } from 'react-icons/fa'
 import { BiLogoGmail } from 'react-icons/bi'
+import Spotlight from '../ui/Spotlight'
+import SparklesCore from '../ui/Memeory Drinkers/SparklesCore'
 
 const slugs = [
   'adobephotoshop',
@@ -88,12 +89,7 @@ const softwares = [
 const About = () => {
   return (
     <section className="aboutWrapper" id="about">
-      <motion.div className="videoContainer">
-        {/* <video autoPlay muted loop className="video">
-          <source src={BlackHole} type="video/webm" />
-        </video> */}
-        {/* <img src={aboutBG} alt="aboutBG" /> */}
-      </motion.div>
+      <motion.div className="videoContainer"></motion.div>
       <div className="bentoContainer">
         <MagicContainer className="grid">
           {/* Container 01 */}
@@ -266,6 +262,16 @@ const About = () => {
 
           {/* Container 09 */}
           <MagicCard className="item">
+            <div>
+              <Spotlight
+                className="-top-[5%] left-[1%] w-[100%] h-[100%]"
+                fill="#c385f0"
+              />
+              <Spotlight
+                className="left-[22%] top-0 h-[100%] w-[80%]"
+                fill="#9200fa"
+              />
+            </div>
             <figure>
               <PiCrownSimpleFill />
             </figure>

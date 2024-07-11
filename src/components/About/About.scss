@@ -7,24 +7,24 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image: url(../../img/about-grid.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-image: url(../../img/about-grid.svg);
+  // background-position: center;
+  // background-repeat: no-repeat;
 
   .videoContainer {
     position: absolute;
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     overflow: hidden;
     top: 0;
     z-index: -1;
-    mask-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0.7, rgba(0, 0, 0, 1)),
-      color-stop(0.99, rgba(0, 0, 0, 0))
-    );
+    // mask-image: -webkit-gradient(
+    //   linear,
+    //   left top,
+    //   left bottom,
+    //   color-stop(0.7, rgba(0, 0, 0, 1)),
+    //   color-stop(0.99, rgba(0, 0, 0, 0))
+    // );
 
     .video {
       width: 100%;
@@ -94,7 +94,7 @@
 
         p {
           font-size: 3.5rem;
-          color: rgb(145, 0, 249);
+          color: rgb(146, 0, 250);
           margin-left: -5px;
         }
       }
