@@ -7,6 +7,9 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  background-image: url(../../img/about-grid.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 
   .videoContainer {
     position: absolute;
@@ -71,6 +74,7 @@
       box-shadow: 0 -10px 50px -10px rgba(66, 52, 91, 0.1) inset;
       transition: all 0.3s ease-in-out;
       color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
 
       &:hover {
         box-shadow: inset 10px 0 20px -10px rgba(66, 52, 91, 0.1),
@@ -274,7 +278,7 @@
     }
     .grid .item:nth-child(6) {
       position: relative;
-      gap: 10%;
+      gap: 7%;
       padding: 7%;
       grid-area: s6;
 
@@ -354,7 +358,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        background: #9c7fbf16;
+        background: #9c7fbf21;
         transition: all 0.3s ease-in-out;
         font-size: 0.9rem;
 
@@ -404,7 +408,7 @@
         }
 
         &:hover {
-          background: #9277b42a;
+          background: #9c7fbf4a;
         }
       }
     }
@@ -452,7 +456,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background: #9c7fbf16;
+        background: #9c7fbf21;
         transition: all 0.3s ease-in-out;
         font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.798);
@@ -479,7 +483,7 @@
         }
 
         &:hover {
-          background: #9277b42a;
+          background: #9c7fbf4a;
           color: white;
         }
       }
@@ -487,10 +491,6 @@
   }
 
   @media screen and (max-width: 1550px) {
-    .videoContainer {
-      width: 110% !important;
-    }
-
     .bentoContainer {
       .grid {
         .item {
@@ -516,6 +516,13 @@
         svg {
           font-size: 1.6rem !important;
         }
+      }
+    }
+
+    .grid .item:nth-child(7) {
+      .bottomText {
+        gap: 0.1rem;
+        font-size: 1.1rem !important;
       }
     }
   }
@@ -565,6 +572,25 @@
         }
       }
     }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 1.1rem !important;
+        svg {
+          font-size: 1.2rem !important;
+        }
+      }
+      .socialLink {
+        figure {
+          svg {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.85rem !important;
+      }
+    }
   }
 
   @media screen and (max-width: 1050px) {
@@ -609,6 +635,33 @@
             }
           }
         }
+      }
+    }
+
+    .grid .item:nth-child(7) {
+      .bottomText {
+        font-size: 1rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 1rem !important;
+        svg {
+          font-size: 1.1rem !important;
+          margin-top: -1px;
+          margin-right: 3px !important;
+        }
+      }
+      .socialLink {
+        figure {
+          svg {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.8rem !important;
       }
     }
   }
@@ -690,8 +743,33 @@
         }
       }
     }
+
+    .grid .item:nth-child(7) {
+      .bottomText {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 1.2rem !important;
+        svg {
+          font-size: 1.3rem !important;
+        }
+      }
+      .socialLink {
+        figure {
+          svg {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 1rem !important;
+      }
+    }
   }
-  // @media screen and (max-width: 768px) {
+
   @media screen and (max-width: 820px) {
     .grid .item:nth-child(5) {
       .bottomText {
@@ -712,6 +790,33 @@
             }
           }
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid .item:nth-child(7) {
+      .bottomText {
+        font-size: 1.1rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 1.2rem !important;
+        svg {
+          font-size: 1.2rem !important;
+        }
+      }
+      .socialLink {
+        figure {
+          svg {
+            font-size: 1.1rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.9rem !important;
       }
     }
   }
@@ -778,6 +883,34 @@
         }
       }
     }
+
+    .grid .item:nth-child(7) {
+      justify-content: center !important;
+      align-items: center !important;
+      .bottomText {
+        text-align: center !important;
+        font-size: 1rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 1.1rem !important;
+        svg {
+          font-size: 1.2rem !important;
+        }
+      }
+      .socialLink {
+        figure {
+          svg {
+            font-size: 1.1rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.9rem !important;
+      }
+    }
   }
 
   @media screen and (max-width: 415px) {
@@ -804,6 +937,33 @@
         }
       }
     }
+
+    .grid .item:nth-child(7) {
+      .bottomText {
+        font-size: 0.8rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 0.95rem !important;
+        svg {
+          font-size: 1rem !important;
+        }
+      }
+      .socialLink {
+        height: 19% !important;
+        figure {
+          svg {
+            font-size: 0.9rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.7rem !important;
+        letter-spacing: 0.2px !important;
+      }
+    }
   }
 
   @media screen and (max-width: 376px) {
@@ -820,7 +980,7 @@
           }
 
           .bottomText {
-            font-size: 55% !important;
+            font-size: 52% !important;
 
             svg {
               margin-left: -2px;
@@ -836,6 +996,32 @@
             font-size: 70% !important;
           }
         }
+      }
+    }
+
+    .grid .item:nth-child(7) {
+      .bottomText {
+        font-size: 0.8rem !important;
+      }
+    }
+
+    .grid .item:nth-child(8) {
+      .bottomText {
+        font-size: 0.9rem !important;
+        svg {
+          font-size: 0.95rem !important;
+        }
+      }
+      .socialLink {
+        height: 19% !important;
+        figure {
+          svg {
+            font-size: 0.85rem !important;
+          }
+        }
+      }
+      span {
+        font-size: 0.6rem !important;
       }
     }
   }

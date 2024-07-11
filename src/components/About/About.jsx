@@ -12,6 +12,7 @@ import Vortex from '../ui/Vortex'
 //Images
 import Grid6BG from '../../img/grid.svg'
 import Grid7 from '../../img/b5.svg'
+import aboutBG from '../../img/about-grid.svg'
 
 //Icons
 import { HiMiniFlag, HiSquare3Stack3D } from 'react-icons/hi2'
@@ -91,11 +92,7 @@ const About = () => {
         {/* <video autoPlay muted loop className="video">
           <source src={BlackHole} type="video/webm" />
         </video> */}
-        <Vortex
-          rangeY={600}
-          particleCount={2000}
-          className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-        />
+        {/* <img src={aboutBG} alt="aboutBG" /> */}
       </motion.div>
       <div className="bentoContainer">
         <MagicContainer className="grid">
@@ -209,7 +206,7 @@ const About = () => {
           {/* Container 07 */}
           <MagicCard className="item">
             <img
-              className="absolute w-[70%] bottom-0 right-0 opacity-80"
+              className="absolute w-[70%] bottom-0 right-0 opacity-90"
               src={Grid7}
               alt="grid7"
             />
@@ -225,25 +222,41 @@ const About = () => {
               <IoRocket />
               Follow Me
             </h1>
-            <a href="#" className="socialLink">
+            <a
+              href="https://github.com/FazeelNizam"
+              target="_blank"
+              className="socialLink"
+            >
               <figure>
                 <FaGithub />
               </figure>
               <span>GitHub</span>
             </a>
-            <a href="#" className="socialLink">
+            <a
+              href="https://www.linkedin.com/in/fazeelnizam/"
+              className="socialLink"
+              target="_blank"
+            >
               <figure>
                 <FaLinkedin />
               </figure>
               <span>LinkedIn</span>
             </a>
-            <a href="#" className="socialLink">
+            <a
+              href="https://web.facebook.com/FazeelNizam00"
+              className="socialLink"
+              target="_blank"
+            >
               <figure>
                 <FaFacebook />
               </figure>
               <span>Facebook</span>
             </a>
-            <a href="#" className="socialLink">
+            <a
+              href="https://www.instagram.com/fazeel_nizm/"
+              className="socialLink"
+              target="_blank"
+            >
               <figure>
                 <FaInstagram />
               </figure>
@@ -261,7 +274,10 @@ const About = () => {
               <p>Let's Make Magic Happen Together!</p>
             </span>
 
-            <a href="#" className="socialLink">
+            <a
+              href="mailto:nizamfazeel@gmail.com?subject=Message from Portfolio&body=Hi Fazeel\n"
+              className="socialLink"
+            >
               <span>
                 <BiLogoGmail />
               </span>
