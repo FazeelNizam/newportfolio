@@ -8,6 +8,7 @@ import { AiOutlineProject } from 'react-icons/ai'
 import { TbDeviceMobileMessage } from 'react-icons/tb'
 // import logo from '../../../public/img/logo.png'
 import './Navbar.scss'
+import { MdDesignServices } from 'react-icons/md'
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home')
@@ -117,19 +118,19 @@ const NavBar = () => {
             </li>
             <li class="li">
               <a
-                href="#contact"
+                href="#projects"
                 className={
-                  activeLink === 'contact'
+                  activeLink === 'designs'
                     ? 'active navbar-link'
                     : 'navbar-link'
                 }
-                onClick={() => onUpdateActiveLink('contact')}
+                onClick={() => onUpdateActiveLink('designs')}
               >
                 <div className="icon">
-                  <TbDeviceMobileMessage size={24} />
+                  <MdDesignServices size={24} />
                 </div>
                 <div className="link-container">
-                  <span className="label">Contact</span>
+                  <span className="label">Designs</span>
                 </div>
               </a>
             </li>

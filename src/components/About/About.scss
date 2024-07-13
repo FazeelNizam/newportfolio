@@ -13,9 +13,12 @@
 
   .videoContainer {
     position: absolute;
-    width: 100vw;
+    width: 120vw;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     z-index: -1;
     // mask-image: -webkit-gradient(
@@ -27,8 +30,10 @@
     // );
 
     .video {
-      width: 100%;
-      object-fit: cover;
+      // width: 100% !important;
+      aspect-ratio: 1/1;
+      // opacity: 0.6;
+      filter: brightness(0.5);
     }
   }
 
@@ -70,7 +75,8 @@
       border-radius: 1rem;
       overflow: hidden;
       transform: translateZ(0);
-      backdrop-filter: blur(12px);
+      background-color: #0c001546;
+      // backdrop-filter: blur(15px);
       box-shadow: 0 -10px 50px -10px rgba(66, 52, 91, 0.1) inset;
       transition: all 0.3s ease-in-out;
       color: white;
@@ -94,7 +100,7 @@
 
         p {
           font-size: 3.5rem;
-          color: rgb(146, 0, 250);
+          color: #9200fa;
           margin-left: -5px;
         }
       }
@@ -110,7 +116,7 @@
 
         svg {
           font-size: 1rem;
-          color: rgb(145, 0, 249);
+          color: #9100f9;
           margin-right: 5px;
         }
       }
@@ -119,15 +125,166 @@
     .grid .item:nth-child(1) {
       grid-area: s1;
     }
+
     .grid .item:nth-child(2) {
       grid-area: s2;
     }
+
     .grid .item:nth-child(3) {
       grid-area: s3;
     }
+
     .grid .item:nth-child(4) {
       grid-area: s4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 3%;
+      gap: 3%;
+
+      .topContainer {
+        align-items: center;
+        gap: 2%;
+
+        .topImgContainer {
+          img {
+            border-radius: 1rem;
+          }
+        }
+        .topNameContainer {
+          flex: 2;
+
+          .availableTab {
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 17px;
+            width: max-content;
+            background: #785e9825;
+            padding: 4px 8px;
+
+            div {
+              position: relative;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: none;
+              background: #785e98a4;
+            }
+
+            div::after {
+              content: '';
+              position: absolute;
+              background-color: rgba(109, 211, 61, 1);
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              border: none;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .topButtonContainer {
+          flex: 1;
+          align-items: flex-start;
+          a {
+            align-items: center;
+
+            p {
+              transition: color 0.3s ease;
+            }
+
+            span {
+              padding: 0.75rem;
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              border-radius: 8px;
+              width: max-content;
+              height: max-content;
+              background: #9c7fbf21;
+
+              svg {
+                transition: color 0.3s ease;
+                font-size: 1.2rem;
+              }
+            }
+
+            &:hover {
+              p {
+                color: white;
+              }
+              span {
+                svg {
+                  color: #9100f9 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      .midleContainer {
+        align-items: center;
+
+        .midleTab {
+          align-items: center;
+          gap: 0.5rem;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 17px;
+          width: max-content;
+          height: max-content;
+          background: #785e9825;
+          padding: 5px 8px;
+          margin-left: 8px;
+          margin-bottom: 8px;
+
+          svg {
+            color: rgb(145, 0, 249);
+            font-size: 1.1rem;
+          }
+        }
+      }
+      .bottomContainer {
+        align-items: center;
+        gap: 2%;
+
+        .socialLink {
+          border-radius: 0.5rem;
+          align-items: center;
+          background: #9c7fbf21;
+          transition: all 0.2s ease-in-out;
+          font-size: 0.9rem;
+          color: #ffffffcb;
+
+          span {
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            svg {
+              font-size: 1.2rem;
+              color: rgb(145, 0, 249);
+            }
+          }
+
+          p {
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 5%;
+          }
+
+          &:hover {
+            background: #9c7fbf4a;
+            color: white;
+          }
+        }
+      }
     }
+
     .grid .item:nth-child(5) {
       grid-area: s5;
       position: relative;
@@ -276,6 +433,7 @@
         }
       }
     }
+
     .grid .item:nth-child(6) {
       position: relative;
       gap: 7%;
@@ -318,6 +476,7 @@
         }
       }
     }
+
     .grid .item:nth-child(7) {
       position: relative;
       justify-content: flex-end;
@@ -334,6 +493,7 @@
         text-align: left;
       }
     }
+
     .grid .item:nth-child(8) {
       grid-area: s8;
       justify-content: space-between;
@@ -359,7 +519,7 @@
         justify-content: flex-start;
         align-items: center;
         background: #9c7fbf21;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         font-size: 0.9rem;
 
         figure {
@@ -412,6 +572,7 @@
         }
       }
     }
+
     .grid .item:nth-child(9) {
       position: relative;
       gap: 8%;
@@ -457,9 +618,9 @@
         justify-content: center;
         align-items: center;
         background: #9c7fbf21;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.798);
+        color: #ffffffcb;
 
         span {
           height: 100%;
@@ -492,6 +653,7 @@
 
   @media screen and (max-width: 1550px) {
     .bentoContainer {
+      padding: calc(2% + 90px) 5% 3% 5%;
       .grid {
         .item {
           .counter {
@@ -593,8 +755,9 @@
     }
   }
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1100px) {
     .bentoContainer {
+      padding: calc(2% + 90px) 3% 3% 3%;
       .grid {
         .item {
           .counter {
@@ -612,6 +775,26 @@
               margin-left: -2px;
               font-size: 0.7rem;
             }
+          }
+        }
+      }
+    }
+
+    .grid .item.item:nth-child(4) {
+      font-size: 0.7rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .name {
+            font-size: 1.75rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          p {
+            font-size: 0.8rem;
           }
         }
       }
@@ -667,6 +850,9 @@
   }
 
   @media screen and (max-width: 992px) {
+    .videoContainer {
+      display: none;
+    }
     .bentoContainer {
       height: auto;
       padding: calc(2vh + 90px) 8vh 3vh 8vh;
@@ -710,6 +896,26 @@
               margin-left: -2px;
               font-size: 85% !important;
             }
+          }
+        }
+      }
+    }
+
+    .grid .item.item:nth-child(4) {
+      font-size: 0.85rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .name {
+            font-size: 1.85rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          p {
+            font-size: 0.9rem;
           }
         }
       }
@@ -795,6 +1001,26 @@
   }
 
   @media screen and (max-width: 768px) {
+    .grid .item.item:nth-child(4) {
+      font-size: 0.7rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .name {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+
     .grid .item:nth-child(7) {
       .bottomText {
         font-size: 1.1rem !important;
@@ -913,7 +1139,7 @@
     }
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 435px) {
     .bentoContainer {
       .grid {
         .item {
@@ -933,6 +1159,72 @@
               margin-left: -2px;
               font-size: 90% !important;
             }
+          }
+        }
+      }
+    }
+
+    .grid .item.item:nth-child(4) {
+      font-size: 0.6rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .availableTab {
+            gap: 0.4rem !important;
+            padding: 2px 5px !important;
+
+            div {
+              width: 15px !important;
+              height: 15px !important;
+            }
+
+            div::after {
+              width: 8px !important;
+              height: 8px !important;
+            }
+          }
+
+          .name {
+            font-size: 1.2rem !important;
+          }
+        }
+
+        .topButtonContainer {
+          a {
+            p {
+              margin-right: -7px !important;
+            }
+
+            span {
+              padding: 0.25rem !important;
+              border-radius: 4px !important;
+
+              svg {
+                font-size: 0.8rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      .midleContainer {
+        .midleTab {
+          gap: 0.35rem;
+          border-radius: 15px;
+          padding: 1px 4px;
+          margin-left: 5px;
+          margin-bottom: 5px;
+
+          svg {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          p {
+            font-size: 0.6rem;
           }
         }
       }
@@ -994,6 +1286,28 @@
         .slidingCardContainer {
           .slidingCard {
             font-size: 70% !important;
+          }
+        }
+      }
+    }
+
+    .grid .item.item:nth-child(4) {
+      font-size: 0.5rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .name {
+            font-size: 1.1rem;
+            margin-bottom: -8px;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          height: 90% !important;
+          p {
+            font-size: 0.6rem;
           }
         }
       }

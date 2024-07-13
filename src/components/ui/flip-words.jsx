@@ -4,7 +4,7 @@ import { AnimatePresence, motion, LayoutGroup } from 'framer-motion'
 // import { cn } from '@/utils/cn'
 import { cn } from '../../utils/cn'
 
-export const FlipWords = ({ words, duration = 3000, className }) => {
+export const FlipWords = ({ words, duration = 3000, className, color }) => {
   const [currentWord, setCurrentWord] = useState(words[0])
   const [isAnimating, setIsAnimating] = useState(false)
 
@@ -53,9 +53,12 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
           position: 'absolute',
         }}
         className={cn(
-          'z-10 inline-block whitespace-break-spaces relative text-left text-neutral-900 dark:text-neutral-100 px-2',
+          'z-10 inline-block whitespace-break-spaces relative text-left px-2',
           className
         )}
+        style={{
+          color: color ? color : '#171717',
+        }}
         key={currentWord}
       >
         {currentWord.split('').map((letter, index) => (

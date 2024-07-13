@@ -1,10 +1,39 @@
+import { TypewriterEffectSmooth } from '../ui/TypeWriter'
 import styles from './Project.module.scss'
+
+const words = [
+  {
+    text: 'Projects',
+  },
+  {
+    text: '&',
+  },
+  {
+    text: 'Designs',
+  },
+  {
+    text: 'Sections',
+  },
+  {
+    text: 'Will',
+  },
+  {
+    text: 'Land',
+  },
+
+  {
+    text: 'Here',
+  },
+  {
+    text: 'Soon',
+  },
+]
 
 const Projects = () => {
   return (
-    <div className={styles.container}>
-      <h1>Projects</h1>
-    </div>
+    <section className={styles.container} id="projects">
+      <TypewriterEffectSmooth words={words} />
+    </section>
   )
 }
 

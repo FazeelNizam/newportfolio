@@ -4,7 +4,6 @@ export const theme = {
   extend: {
     animation: {
       gradient: 'gradient 8s linear infinite',
-      'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
       marquee: 'marquee var(--duration) linear infinite',
       'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
       spotlight: 'spotlight 2s ease .75s 1 forwards',
@@ -13,12 +12,6 @@ export const theme = {
       gradient: {
         to: {
           backgroundPosition: 'var(--bg-size) 0',
-        },
-      },
-
-      'border-beam': {
-        '100%': {
-          'offset-distance': '100%',
         },
       },
 

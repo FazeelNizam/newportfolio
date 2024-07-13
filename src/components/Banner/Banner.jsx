@@ -135,7 +135,7 @@ const Banner = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="bannerFlipText"
           >
-            <FlipWords words={words} />
+            <FlipWords color="white" words={words} />
           </motion.div>
           <motion.div
             // style={{ y: front }}
