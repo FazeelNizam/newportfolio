@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.99a133dc.css",
+    "main.js": "/portfolio/static/js/main.9860ecc9.js",
+    "static/media/grid.svg": "/portfolio/static/media/grid.93f4b9db6165d338ce4d5a8bf046d5b1.svg",
+    "static/media/cards-video.webm": "/portfolio/static/media/cards-video.2e89a5001b76c92e1338.webm",
+    "static/media/b5.svg": "/portfolio/static/media/b5.b418a52c8c9351ed4be4c94e0216bf68.svg",
+    "static/media/dp.png": "/portfolio/static/media/dp.71eb9ae4a25ba6d097ca.png",
+    "static/media/hero_b.png": "/portfolio/static/media/hero_b.bbd621fe4bf21b8329ae.png",
+    "static/media/Fazeel Nizam - CV.pdf": "/portfolio/static/media/Fazeel Nizam - CV.dcb4c3715925519e3d38.pdf",
+    "static/media/hero_f.png": "/portfolio/static/media/hero_f.46855f5a6d9b00cdde9b.png",
+    "static/media/mid_1.png": "/portfolio/static/media/mid_1.f810534c43bb4905ba61.png",
+    "static/media/mid_2.png": "/portfolio/static/media/mid_2.03d5316faaecc16c6fda.png",
+    "static/media/back.png": "/portfolio/static/media/back.20b508dc4e60f36fd43a.png",
+    "static/media/about-grid.svg": "/portfolio/static/media/about-grid.1f1189bb41a9abe34d3ef7c676ebdc72.svg",
+    "static/media/r.png": "/portfolio/static/media/r.6d91d6a4b5c515d4e293.png",
+    "index.html": "/portfolio/index.html",
+    "main.99a133dc.css.map": "/portfolio/static/css/main.99a133dc.css.map",
+    "main.9860ecc9.js.map": "/portfolio/static/js/main.9860ecc9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99a133dc.css",
+    "static/js/main.9860ecc9.js"
+  ]
+}
