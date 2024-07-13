@@ -27,6 +27,7 @@ import { PiCrownSimpleFill, PiShootingStarDuotone } from 'react-icons/pi'
 import { GiEmptyHourglass, GiSpanner } from 'react-icons/gi'
 import { IoRocket } from 'react-icons/io5'
 import {
+  FaBehance,
   FaDownload,
   FaFacebook,
   FaGithub,
@@ -41,69 +42,8 @@ import { FaClock, FaLocationDot } from 'react-icons/fa6'
 import { MdOutlineLanguage } from 'react-icons/md'
 import { GrTechnology } from 'react-icons/gr'
 
-const slugs = [
-  'adobephotoshop',
-  'adobe',
-  'autocad',
-  'wondershare',
-  'linux',
-  'c',
-  'arduino',
-  'proteus',
-  'multisim',
-  'windows',
-  'sass',
-  'python',
-  'javascript',
-  'java',
-  'react',
-  'python',
-  'html5',
-  'css3',
-  'nodedotjs',
-  'express',
-  'nextdotjs',
-  'prisma',
-  'firebase',
-  'vercel',
-  'git',
-  'github',
-  'gitlab',
-  'visualstudiocode',
-  'figma',
-]
-
-const frameworks = [
-  { svg: <HiMiniFlag />, text: 'ReactJs' },
-  { svg: <HiMiniFlag />, text: 'NextJs' },
-  { svg: <HiMiniFlag />, text: 'Java' },
-  { svg: <HiMiniFlag />, text: 'C' },
-  { svg: <HiMiniFlag />, text: 'Java Script' },
-  { svg: <HiMiniFlag />, text: 'Assembly' },
-  { svg: <HiMiniFlag />, text: 'HTML' },
-  { svg: <HiMiniFlag />, text: 'SASS' },
-  { svg: <HiMiniFlag />, text: 'CSS' },
-]
-
-const softwares = [
-  { svg: <GiEmptyHourglass />, text: 'Filmora' },
-  { svg: <GiEmptyHourglass />, text: 'keil' },
-  { svg: <GiEmptyHourglass />, text: 'Ni Multisim' },
-  { svg: <GiEmptyHourglass />, text: 'Proteus' },
-  { svg: <GiEmptyHourglass />, text: 'Matlab' },
-  { svg: <GiEmptyHourglass />, text: 'Illustrator' },
-  { svg: <GiEmptyHourglass />, text: 'Figma' },
-  { svg: <GiEmptyHourglass />, text: 'Photoshop' },
-  { svg: <GiEmptyHourglass />, text: 'AutoCad' },
-]
-
-const words = [
-  'Computer Engineer',
-  'Software Engineer',
-  'Frontend Developer',
-  'Web Developer',
-  'Graphic Designer',
-]
+//Data Imports
+import { languages, softwares, aboutWords, aboutSlugs } from '../../data/data'
 
 const About = () => {
   return (
@@ -147,13 +87,6 @@ const About = () => {
               </span>
             </AnimatedGradientText>
           </MagicCard>
-          {/* <ShineBorder
-            borderRadius={16}
-            className="item"
-            color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
-          >
-            3
-          </ShineBorder> */}
 
           {/* Container 03 */}
           <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
@@ -185,7 +118,7 @@ const About = () => {
                   <div>
                     <span>I'm A</span>
                     <span>
-                      <FlipWords color="#9100f9" words={words} />
+                      <FlipWords color="#9100f9" words={aboutWords} />
                     </span>
                   </div>
                 </div>
@@ -262,7 +195,13 @@ const About = () => {
                 <Marquee pauseOnHover vertical className="[--duration:20s]">
                   {softwares.map((scard) => (
                     <div className="slidingCard" key={scard.text}>
-                      <figure>{scard.svg}</figure>
+                      <figure>
+                        <img
+                          src={scard.svg}
+                          alt={scard.text}
+                          className="w-[60%]"
+                        />
+                      </figure>
                       <span>{scard.text}</span>
                     </div>
                   ))}
@@ -275,17 +214,23 @@ const About = () => {
                   vertical
                   className="[--duration:20s]"
                 >
-                  {frameworks.map((fcard) => (
-                    <div className="slidingCard" key={fcard.text}>
-                      <figure>{fcard.svg}</figure>
-                      <span>{fcard.text}</span>
+                  {languages.map((lcard) => (
+                    <div className="slidingCard" key={lcard.text}>
+                      <figure>
+                        <img
+                          src={lcard.svg}
+                          alt={lcard.text}
+                          className="w-[60%]"
+                        />
+                      </figure>
+                      <span>{lcard.text}</span>
                     </div>
                   ))}
                 </Marquee>
               </div>
             </div>
             <div className="iconCloud">
-              <IconCloud iconSlugs={slugs} />
+              <IconCloud iconSlugs={aboutSlugs} />
             </div>
           </MagicCard>
 
@@ -346,6 +291,17 @@ const About = () => {
                 <FaLinkedin />
               </figure>
               <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://www.behance.net/fazeelnizam/projects"
+              className="socialLink"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure>
+                <FaBehance />
+              </figure>
+              <span>Behance</span>
             </a>
             <a
               href="https://web.facebook.com/FazeelNizam00"
