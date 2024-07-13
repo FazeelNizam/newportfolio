@@ -227,7 +227,7 @@ const About = () => {
             </div>
             <div className="bottomContainer flex justify-between gap-[2%] w-[100%] h-[20%] flex-row flex-wrap">
               <a
-                href="https://api.whatsapp.com/send?phone=+94768114000"
+                href="https://wa.me/+94768114000"
                 target="_blank"
                 rel="noreferrer"
                 className="socialLink w-[48%] h-[100%] flex flex-row justify-center"

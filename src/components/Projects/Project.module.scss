@@ -5,4 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: calc(100vh * 0.01);
+
+  a {
+    border: 1px solid rgba(255, 255, 255, 0.165);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
 }
