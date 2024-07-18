@@ -29,6 +29,47 @@ import Ps from '../img/Logos/photoshop.svg'
 import Cad from '../img/Logos/autodesk.svg'
 import Arduino from '../img/Logos/arduino.svg'
 import Canva from '../img/Logos/canva.svg'
+import { GiEmptyHourglass } from 'react-icons/gi'
+import { HiMiniFlag } from 'react-icons/hi2'
+import { PiShootingStarDuotone } from 'react-icons/pi'
+import {
+  FaBehance,
+  FaClock,
+  FaFacebook,
+  FaGithub,
+  FaGraduationCap,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from 'react-icons/fa'
+import { GrTechnology } from 'react-icons/gr'
+import { MdOutlineLanguage } from 'react-icons/md'
+
+export const counterCards = [
+  { value: 100, svg: <GiEmptyHourglass />, text: 'Hours of Coding' },
+  { value: 19, svg: <HiMiniFlag />, text: 'projects' },
+  { value: 3, svg: <PiShootingStarDuotone />, text: 'Year Experience' },
+]
+
+export const aboutCardTabData = [
+  { svg: <FaClock />, text: 'IST' },
+  { svg: <FaGraduationCap />, text: 'Open University' },
+  { svg: <GrTechnology />, text: 'Electronic Engineer Intern' },
+  { svg: <MdOutlineLanguage />, text: 'Sinhala, English & Tamil' },
+]
+
+export const aboutCardContactData = [
+  {
+    link: 'https://wa.me/+94768114000',
+    svg: <FaWhatsapp />,
+    text: 'Whatsapp Me',
+  },
+  {
+    link: 'http://m.me/FazeelNizam00',
+    svg: <FaFacebook />,
+    text: 'DM Me (Facebook)',
+  },
+]
 
 export const languages = [
   { svg: ReactJs, text: 'ReactJs' },
@@ -102,4 +143,28 @@ export const aboutWords = [
   'Frontend Developer',
   'Web Developer',
   'Graphic Designer',
+]
+
+export const contactCard = [
+  { link: 'https://github.com/FazeelNizam', svg: <FaGithub />, text: 'GitHub' },
+  {
+    link: 'https://www.linkedin.com/in/fazeelnizam/',
+    svg: <FaLinkedin />,
+    text: 'LinkedIn',
+  },
+  {
+    link: 'https://www.behance.net/fazeelnizam/projects',
+    svg: <FaBehance />,
+    text: 'Behance',
+  },
+  {
+    link: 'https://web.facebook.com/FazeelNizam00',
+    svg: <FaFacebook />,
+    text: 'Facebook',
+  },
+  {
+    link: 'https://www.instagram.com/fazeel_nizm/',
+    svg: <FaInstagram />,
+    text: 'Instagram',
+  },
 ]

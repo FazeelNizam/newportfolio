@@ -65,8 +65,8 @@ const NavBar = () => {
         transition={{ delay: 1.4, duration: 0.5 }}
       >
         <div class="navbar" className={scrolled ? 'navbar scrolled' : 'navbar'}>
-          <ul class="menu">
-            <li class="li">
+          <ul className="menu">
+            <li className="li">
               <a
                 href="#home"
                 className={
@@ -82,7 +82,7 @@ const NavBar = () => {
                 </div>
               </a>
             </li>
-            <li class="li">
+            <li className="li">
               <a
                 href="#about"
                 className={
@@ -98,7 +98,7 @@ const NavBar = () => {
                 </div>
               </a>
             </li>
-            <li class="li">
+            <li className="li">
               <a
                 href="#projects"
                 className={
@@ -116,7 +116,7 @@ const NavBar = () => {
                 </div>
               </a>
             </li>
-            <li class="li">
+            <li className="li">
               <a
                 href="#projects"
                 className={

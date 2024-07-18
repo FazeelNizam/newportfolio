@@ -689,10 +689,11 @@
     }
   }
 
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 1290px) {
     .bentoContainer {
+      padding: calc(2% + 90px) 6% 2% 6%;
       .grid {
-        height: 85%;
+        height: 100%;
         .item {
           .counter {
             font-size: 70%;
@@ -714,12 +715,81 @@
       }
     }
 
+    .grid .item.item:nth-child(4) {
+      font-size: 0.6rem !important;
+
+      .topContainer {
+        .topNameContainer {
+          .availableTab {
+            gap: 0.4rem !important;
+            padding: 2px 5px !important;
+
+            div {
+              width: 15px !important;
+              height: 15px !important;
+            }
+
+            div::after {
+              width: 8px !important;
+              height: 8px !important;
+            }
+          }
+
+          .name {
+            margin-top: -5px;
+            margin-bottom: -7px;
+            font-size: 1.2rem !important;
+          }
+        }
+
+        .topButtonContainer {
+          a {
+            p {
+              margin-right: -7px !important;
+            }
+
+            span {
+              padding: 0.25rem !important;
+              border-radius: 4px !important;
+
+              svg {
+                font-size: 0.8rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      .midleContainer {
+        .midleTab {
+          gap: 0.35rem;
+          border-radius: 15px;
+          padding: 1px 4px;
+          margin-left: 5px;
+          margin-bottom: 5px;
+
+          svg {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        .socialLink {
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+
     .grid .item:nth-child(5) {
       .bottomText {
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
 
         svg {
-          font-size: 1.5rem !important;
+          font-size: 1.3rem !important;
+          margin-top: -1px;
         }
       }
 
@@ -737,117 +807,117 @@
 
     .grid .item:nth-child(8) {
       .bottomText {
-        font-size: 1.1rem !important;
-        svg {
-          font-size: 1.2rem !important;
-        }
-      }
-      .socialLink {
-        figure {
-          svg {
-            font-size: 1rem !important;
-          }
-        }
-      }
-      span {
-        font-size: 0.85rem !important;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1100px) {
-    .bentoContainer {
-      padding: calc(2% + 90px) 3% 3% 3%;
-      .grid {
-        .item {
-          .counter {
-            font-size: 60%;
-
-            p {
-              font-size: 60%;
-            }
-          }
-
-          .bottomText {
-            font-size: 60%;
-
-            svg {
-              margin-left: -2px;
-              font-size: 0.7rem;
-            }
-          }
-        }
-      }
-    }
-
-    .grid .item.item:nth-child(4) {
-      font-size: 0.7rem !important;
-
-      .topContainer {
-        .topNameContainer {
-          .name {
-            font-size: 1.75rem;
-          }
-        }
-      }
-
-      .bottomContainer {
-        .socialLink {
-          p {
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-
-    .grid .item:nth-child(5) {
-      .bottomText {
-        font-size: 1.2rem !important;
-
-        svg {
-          font-size: 1.3rem !important;
-        }
-      }
-
-      .slidingCardContainer {
-        .slidingCard {
-          font-size: 65%;
-          figure {
-            svg {
-              font-size: 0.9rem;
-            }
-          }
-        }
-      }
-    }
-
-    .grid .item:nth-child(7) {
-      .bottomText {
-        font-size: 1rem !important;
-      }
-    }
-
-    .grid .item:nth-child(8) {
-      .bottomText {
         font-size: 1rem !important;
         svg {
           font-size: 1.1rem !important;
-          margin-top: -1px;
-          margin-right: 3px !important;
         }
       }
       .socialLink {
         figure {
           svg {
-            font-size: 1rem !important;
+            font-size: 0.85rem !important;
           }
         }
       }
       span {
-        font-size: 0.8rem !important;
+        font-size: 75% !important;
       }
     }
   }
+
+  // @media screen and (max-width: 1100px) {
+  //   .bentoContainer {
+  //     padding: calc(2% + 90px) 3% 3% 3%;
+  //     .grid {
+  //       .item {
+  //         .counter {
+  //           font-size: 60%;
+
+  //           p {
+  //             font-size: 60%;
+  //           }
+  //         }
+
+  //         .bottomText {
+  //           font-size: 60%;
+
+  //           svg {
+  //             margin-left: -2px;
+  //             font-size: 0.7rem;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .grid .item.item:nth-child(4) {
+  //     font-size: 0.7rem !important;
+
+  //     .topContainer {
+  //       .topNameContainer {
+  //         .name {
+  //           font-size: 1.75rem;
+  //         }
+  //       }
+  //     }
+
+  //     .bottomContainer {
+  //       .socialLink {
+  //         p {
+  //           font-size: 0.8rem;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .grid .item:nth-child(5) {
+  //     .bottomText {
+  //       font-size: 1.2rem !important;
+
+  //       svg {
+  //         font-size: 1.3rem !important;
+  //       }
+  //     }
+
+  //     .slidingCardContainer {
+  //       .slidingCard {
+  //         font-size: 65%;
+  //         figure {
+  //           svg {
+  //             font-size: 0.9rem;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .grid .item:nth-child(7) {
+  //     .bottomText {
+  //       font-size: 1rem !important;
+  //     }
+  //   }
+
+  //   .grid .item:nth-child(8) {
+  //     .bottomText {
+  //       font-size: 1rem !important;
+  //       svg {
+  //         font-size: 1.1rem !important;
+  //         margin-top: -1px;
+  //         margin-right: 3px !important;
+  //       }
+  //     }
+  //     .socialLink {
+  //       figure {
+  //         svg {
+  //           font-size: 1rem !important;
+  //         }
+  //       }
+  //     }
+  //     span {
+  //       font-size: 0.8rem !important;
+  //     }
+  //   }
+  // }
 
   @media screen and (max-width: 992px) {
     .videoContainer {

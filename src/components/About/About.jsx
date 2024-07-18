@@ -14,7 +14,6 @@ import AnimatedGradientText from '../ui/AnimatedGradientText'
 //Images
 import Grid6BG from '../../img/grid.svg'
 import Grid7 from '../../img/b5.svg'
-import aboutBG from '../../img/about-grid.svg'
 import DP from '../../img/dp.png'
 import cardVideo from '../../img/cards-video.webm'
 
@@ -22,28 +21,23 @@ import cardVideo from '../../img/cards-video.webm'
 import CV from '../../cv/Fazeel Nizam - CV.pdf'
 
 //Icons
-import { HiMiniFlag, HiSquare3Stack3D } from 'react-icons/hi2'
-import { PiCrownSimpleFill, PiShootingStarDuotone } from 'react-icons/pi'
-import { GiEmptyHourglass, GiSpanner } from 'react-icons/gi'
+import { HiSquare3Stack3D } from 'react-icons/hi2'
+import { PiCrownSimpleFill } from 'react-icons/pi'
 import { IoRocket } from 'react-icons/io5'
-import {
-  FaBehance,
-  FaDownload,
-  FaFacebook,
-  FaGithub,
-  FaGraduationCap,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-  FaWhatsappSquare,
-} from 'react-icons/fa'
+import { FaDownload, FaGraduationCap } from 'react-icons/fa'
 import { BiLogoGmail } from 'react-icons/bi'
-import { FaClock, FaLocationDot } from 'react-icons/fa6'
-import { MdOutlineLanguage } from 'react-icons/md'
-import { GrTechnology } from 'react-icons/gr'
 
 //Data Imports
-import { languages, softwares, aboutWords, aboutSlugs } from '../../data/data'
+import {
+  languages,
+  softwares,
+  aboutWords,
+  aboutSlugs,
+  counterCards,
+  aboutCardTabData,
+  aboutCardContactData,
+  contactCard,
+} from '../../data/data'
 
 const About = () => {
   return (
@@ -61,45 +55,20 @@ const About = () => {
       </motion.div>
       <div className="bentoContainer">
         <MagicContainer className="grid">
-          {/* Container 01 */}
-          <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
-            <span className="counter">
-              <NumberTicker value={100} delay={0.5} /> <p>+</p>
-            </span>
-            <AnimatedGradientText>
-              <span className="bottomText">
-                {/* <RiHourglassFill /> */}
-                <GiEmptyHourglass />
-                Hours of Coding
+          {/* Container 1 2 3 */}
+          {counterCards.map((card) => (
+            <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
+              <span className="counter">
+                <NumberTicker value={card.value} delay={0.5} /> <p>+</p>
               </span>
-            </AnimatedGradientText>
-          </MagicCard>
-
-          {/* Container 02 */}
-          <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
-            <span className="counter">
-              <NumberTicker value={19} delay={0.5} /> <p>+</p>
-            </span>
-            <AnimatedGradientText>
-              <span className="bottomText">
-                <HiMiniFlag />
-                projects
-              </span>
-            </AnimatedGradientText>
-          </MagicCard>
-
-          {/* Container 03 */}
-          <MagicCard className="item whitespace-pre-wrap text-6xl font-medium tracking-tighter">
-            <span className="counter">
-              <NumberTicker value={3} delay={0.5} /> <p>+</p>
-            </span>
-            <AnimatedGradientText>
-              <span className="bottomText">
-                <PiShootingStarDuotone />
-                Year Experience
-              </span>
-            </AnimatedGradientText>
-          </MagicCard>
+              <AnimatedGradientText>
+                <span className="bottomText">
+                  {card.svg}
+                  {card.text}
+                </span>
+              </AnimatedGradientText>
+            </MagicCard>
+          ))}
 
           {/* Container 04 */}
           <MagicCard className="item  text-sm">
@@ -137,50 +106,25 @@ const About = () => {
               </div>
             </div>
             <div className="midleContainer flex w-[100%] h-[25%] flex-wrap">
-              <span className="midleTab flex flex-row align-middle">
-                <FaLocationDot />
-                <p>Sri Lanka</p>
-              </span>
-              <span className="midleTab flex flex-row align-middle">
-                <FaClock />
-                <p>IST</p>
-              </span>
-              <span className="midleTab flex flex-row align-middle">
-                <FaGraduationCap />
-                <p>Open University</p>
-              </span>
-              <span className="midleTab flex flex-row align-middle">
-                <GrTechnology />
-                <p>Electronic Engineer Intern</p>
-              </span>
-              <span className="midleTab flex flex-row align-middle">
-                <MdOutlineLanguage />
-                <p>Sinhala, English & Tamil</p>
-              </span>
+              {aboutCardTabData.map((tab) => (
+                <span className="midleTab flex flex-row align-middle">
+                  {tab.svg}
+                  <p>{tab.text}</p>
+                </span>
+              ))}
             </div>
             <div className="bottomContainer flex justify-between gap-[2%] w-[100%] h-[20%] flex-row flex-wrap">
-              <a
-                href="https://wa.me/+94768114000"
-                target="_blank"
-                rel="noreferrer"
-                className="socialLink w-[48%] h-[100%] flex flex-row justify-center"
-              >
-                <span>
-                  <FaWhatsapp />
-                </span>
-                <p>Whatsapp Me</p>
-              </a>
-              <a
-                href="http://m.me/FazeelNizam00"
-                target="_blank"
-                rel="noreferrer"
-                className="socialLink w-[48%] h-[100%] flex flex-row justify-center"
-              >
-                <span>
-                  <FaFacebook />
-                </span>
-                <p>DM Me (Facebook)</p>
-              </a>
+              {aboutCardContactData.map((card) => (
+                <a
+                  href={card.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="socialLink w-[48%] h-[100%] flex flex-row justify-center"
+                >
+                  <span>{card.svg}</span>
+                  <p>{card.text}</p>
+                </a>
+              ))}
             </div>
           </MagicCard>
 
@@ -270,61 +214,17 @@ const About = () => {
               <IoRocket />
               Follow Me
             </h1>
-            <a
-              href="https://github.com/FazeelNizam"
-              className="socialLink"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <figure>
-                <FaGithub />
-              </figure>
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/fazeelnizam/"
-              className="socialLink"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <figure>
-                <FaLinkedin />
-              </figure>
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://www.behance.net/fazeelnizam/projects"
-              className="socialLink"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <figure>
-                <FaBehance />
-              </figure>
-              <span>Behance</span>
-            </a>
-            <a
-              href="https://web.facebook.com/FazeelNizam00"
-              className="socialLink"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <figure>
-                <FaFacebook />
-              </figure>
-              <span>Facebook</span>
-            </a>
-            <a
-              href="https://www.instagram.com/fazeel_nizm/"
-              className="socialLink"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <figure>
-                <FaInstagram />
-              </figure>
-              <span>Instagram</span>
-            </a>
+            {contactCard.map((card) => (
+              <a
+                href={card.link}
+                className="socialLink"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <figure>{card.svg}</figure>
+                <span>{card.text}</span>
+              </a>
+            ))}
           </MagicCard>
 
           {/* Container 09 */}
